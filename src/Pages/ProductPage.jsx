@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query';
-import { getCat } from '../Api/api'
+import { getCat } from '../utilities/api'
 import Axios from 'axios';
 import Card from '../components/Card';
 function ProductPage({ productId, productImage, productTitle, productPrice }) {
@@ -10,7 +10,8 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
   useEffect(() => {
     getAllCat()
   }, [])
- 
+
+  // Get all Fehcing data
   async function getAllCat() {
     return Axios.get('https://fakestoreapi.com/products')
       .then(res => setProducts(res.data))
@@ -19,7 +20,7 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
   // Quere for Fetching All Categories
   const quere = useQuery({ queryKey: ['categories'], queryFn: getCat });
   const { isSuccess } = quere
-  
+
   // fatch Categories by Categories Name
   async function getCatName(catname) {
     return Axios.get(`https://fakestoreapi.com/products/category/${catname}`)
