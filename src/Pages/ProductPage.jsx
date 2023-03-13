@@ -7,8 +7,6 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
   const { data, isError, isFetching, isSuccess } = useQuery(['products'], () => {
     return Axios.get('https://fakestoreapi.com/products')
       .then(res => res.data)
-
-
   });
   return (
     <>
@@ -17,15 +15,13 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
       <div>{isError && 'Error'}</div>
       <div className="container">
         <div className="row d-flex justify-content-evenly">
-
-
           {isSuccess && data?.map(product =>
-          <Card productId={product.id}
-         productImage={product.image}
+            <Card key={product.id} productId={product.id}
+              productImage={product.image}
               productTitle={product.title}
               productPrice={product.price}
-          />
-           )}
+            />
+          )}
         </div>
 
       </div>
