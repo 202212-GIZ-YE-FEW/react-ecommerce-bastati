@@ -11,13 +11,12 @@ function App() {
   // Create a client
   const queryClient = new QueryClient();
   return (
-    <div classNameName="App">
-    
+    <div className="App">
       <QueryClientProvider client={queryClient}>
-      <Routes>
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductPage />} />
-      </Routes>
+        </Routes>
       </QueryClientProvider>
     </div>
   )

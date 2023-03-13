@@ -17,7 +17,7 @@ function Card({ productId, productImage, productTitle, productPrice }) {
                 <p className='text-black-50 p-2 small'>{productPrice}$</p>
                 <button className='cartBtn border-0 text-white rounded px-3'>
                
-                  <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />add to cart</button>
+                  <FontAwesomeIcon icon="fa-solid fa-cart-shopping"/>add to cart</button>
             </div>
           </div>
         </div>
