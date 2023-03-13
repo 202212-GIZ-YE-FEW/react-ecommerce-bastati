@@ -1,5 +1,11 @@
 p {
     font-family: Ubuntu-B;
-    color: black;
-    font-size: 50px;
+    /* color: black;
+    font-size: 50px; */
+}
+.cartBtn{
+    background-color: #30336b;
+}
+.cart{
+    width: 444px;
 }
