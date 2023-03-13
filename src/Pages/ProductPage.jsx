@@ -13,8 +13,10 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
       <div>ProductPage</div>
       <div>{isFetching && 'Background Updating...'}</div>
       <div>{isError && 'Error'}</div>
-      <div className="container">
-        <div className="row d-flex justify-content-evenly">
+      <div className="container p-5">
+        <div className="row">
+
+
           {isSuccess && data?.map(product =>
             <Card key={product.id} productId={product.id}
               productImage={product.image}
