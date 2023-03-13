@@ -1,8 +1,8 @@
 import React from 'react'
-
+import '../assets/css/ProductPage.css'
 function HomePage() {
   return (
-    <div>Home Page</div>
+    <div><p>Home Page</p></div>
   )
 }
 
