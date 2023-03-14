@@ -1,6 +1,6 @@
-
 import React from 'react'
 import logo from '../assets/images/logo.png'
+import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -13,13 +13,13 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Products</a>
+              <NavLink className="nav-link active" aria-current="page" to="/products">Products</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">About</a>
+              <NavLink className="nav-link active" aria-current="page" to="/about">About</NavLink>
             </li>
 
 

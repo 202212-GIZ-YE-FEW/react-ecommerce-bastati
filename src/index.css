@@ -4,12 +4,10 @@ footer {
     color: #fff;
 }
 
-/* .first-footer {
-        display: flex;
-        flex-direction: row;
-        padding: 20px;
-    }
-    */
+.first-footer {
+    width: 100%;
+}
+
 footer .first-footer div {
     padding: 0px 20px;
 
@@ -22,6 +20,13 @@ footer .first-footer .about-site {
     align-items: flex-start;
     align-content: flex-start;
     justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+
+    footer .first-footer .about-site {
+        margin-bottom: 25px;
+    }
 }
 
 
@@ -71,10 +76,7 @@ footer .first-footer .soc-icons .insta {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-footer .first-footer .footer-links {
-    padding: 0px;
 
-}
 
 footer .first-footer .footer-links li {
     padding: 0px;

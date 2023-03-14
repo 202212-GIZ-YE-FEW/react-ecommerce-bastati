@@ -28,7 +28,7 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
   }
   return (
     <>
-      <div className="container p-5">
+      <div className="container">
         <div className='categorie-div'>
           <button className='categorie-btn' onClick={() => getAllCat()}>All</button>
           {isSuccess && quere.data?.map((categorie, index) => {
@@ -36,7 +36,7 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
           })}
         </div>
 
-        <div className="row">
+        <div className="row justify-content-around">
           {products?.map(product =>
             <Card key={product.id} productId={product.id}
               productImage={product.image}

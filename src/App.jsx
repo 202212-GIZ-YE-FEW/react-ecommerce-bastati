@@ -7,7 +7,11 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMoon, faRocket } from "@fortawesome/free-solid-svg-icons";
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import AboutPage from "./Pages/AboutPage";
+import ProductDetailsPage from "./Pages/ProductDetailsPage";
 library.add(faMoon, faRocket);
+
+
 function App() {
   // Create a client
   const queryClient = new QueryClient();
@@ -17,7 +21,9 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/products" element={<ProductPage />} />
+          <Route path="products" element={<ProductPage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="products/:productId" element={<ProductDetailsPage />} />
         </Routes>
       </QueryClientProvider>
       <Footer />
