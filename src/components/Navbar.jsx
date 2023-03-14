@@ -28,11 +28,12 @@ function Navbar() {
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button className="btn btn-outline-success" type="submit">Search</button>
-              <div className='cart-icon'>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div className='cart-Counetr'><p>0</p></div>
-
-              </div>
+              <NavLink to="/cart">
+                <div className='cart-icon'>
+                  <i className="fa-solid fa-cart-shopping"></i>
+                  <div className='cart-Counetr'><p>0</p></div>
+                </div>
+              </NavLink>
             </form>
           </div>
         </div>
