@@ -1,6 +1,7 @@
 import React from 'react'
 import '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../assets/css/ProductPage.css'
 function Card({ productId, productImage, productTitle, productPrice }) {
   return (
     <>
@@ -12,7 +13,7 @@ function Card({ productId, productImage, productTitle, productPrice }) {
             
               <img src={productImage} className="card-img-top" />
               </div>
-              <div class="card-body">
+              <div className="card-body">
             <p className=' title fs-5 p-2 h-25 '>{productTitle}</p>
                 <p className='text-black-50 p-2 small'>{productPrice}$</p>
                 <button className='cartBtn border-0 text-white rounded px-3'>

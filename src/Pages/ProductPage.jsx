@@ -11,7 +11,7 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
     getAllCat()
   }, [])
 
-  // Get all Fehcing data
+  // Get all Fehcing data 
   async function getAllCat() {
     return Axios.get('https://fakestoreapi.com/products')
       .then(res => setProducts(res.data))
