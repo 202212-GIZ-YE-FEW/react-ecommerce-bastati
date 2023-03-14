@@ -5,23 +5,27 @@ import '../assets/css/ProductPage.css'
 function Card({ productId, productImage, productTitle, productPrice }) {
   return (
     <>
-      <div className="col-md-6 col-lg-4 mb-4 col-sm-12 rounded" key={productId}>
+      <div className="card-container col-md-4 col-lg-3 mb-4 col-sm-12 rounded" key={productId}>
         <div className="card">
           <div className='d-flex justify-content-between p-3'>
-          <div className='text-center '>
+            <div className='text-center '>
               <div className='cardImage'>
-            
-              <img src={productImage} className="card-img-top" />
+
+                <img src={productImage} className="card-img-top" />
               </div>
+
               <div className="card-body">
-            <p className=' title fs-5 p-2 h-25 '>{productTitle}</p>
+                <div className='title-container'>
+                  <p className=' title fs-5 p-2 h-25 '>{productTitle}</p>
+                </div>
+
                 <p className='text-black-50 p-2 small'>{productPrice}$</p>
-                <button className='cartBtn border-0 text-white rounded px-3'>
-               
-                  <FontAwesomeIcon icon="fa-solid fa-cart-shopping"/>add to cart</button>
+                <button className='cartBtn border-0 text-white rounded px-3 py-2'>
+
+                  <i class="fa-solid fa-cart-plus px-2"></i>add to cart</button>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div></>
   )
