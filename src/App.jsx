@@ -24,6 +24,7 @@ function App() {
           <Route path="products" element={<ProductPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products/:productId" element={<ProductDetailsPage />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </QueryClientProvider>
       <Footer />
