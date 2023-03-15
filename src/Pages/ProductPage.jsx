@@ -5,7 +5,8 @@ import Axios from 'axios';
 import Card from '../components/Card';
 
 function ProductPage({ productId, productImage, productTitle, productPrice }) {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
 
   // Queries
   useEffect(() => {
@@ -28,6 +29,13 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
       .then(res => setProducts(res.data))
   }
 
+  let Newdata = products.filter((ele) => {
+    if (search == "") {
+      return ele;
+    } else if (ele.title.toLowerCase().includes(search.toLowerCase())) {
+      return row;
+    }
+  })
   return (
     <>
       <div className="container">

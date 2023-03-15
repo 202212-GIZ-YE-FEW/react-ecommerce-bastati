@@ -18,6 +18,9 @@ p {
 
 .cartBtn {
     background-color: #30336b;
+    width: 150px;
+    padding: 0 !important;
+    margin: auto;
 }
 .categorie-div{
     display: flex;
