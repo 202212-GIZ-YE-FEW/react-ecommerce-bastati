@@ -15,11 +15,10 @@ function App() {
   // Create a client
 
   const queryClient = new QueryClient();
- 
+
   return (
     <div className="App">
-
-      <Navbar/>
+      <Navbar />
       <QueryClientProvider client={queryClient}>
         <Routes>
           <Route path="/" element={<HomePage />} />
