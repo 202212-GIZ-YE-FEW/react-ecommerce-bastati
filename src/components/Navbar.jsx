@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../assets/images/logo.png'
 import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
