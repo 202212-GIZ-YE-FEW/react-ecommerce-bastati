@@ -24,18 +24,15 @@ function Navbar() {
               <NavLink className="nav-link active" aria-current="page" to="/about">About</NavLink>
             </li>
           </ul>
-          <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={() => { setSearch(e.target.value) }} />
-          </form>
           <div>
-            <form className="d-flex" role="search">
-              <NavLink to="/cart" className="">
+            <div className="d-flex" role="search">
+              <NavLink to="/cart">
                 <div className='cart-icon'>
                   <i class="fa-solid fa-cart-shopping"></i>
                   <div className='cart-Counetr'><p>{cartItems.length}</p></div>
                 </div>
               </NavLink>
-            </form>
+            </div>
           </div>
         </div>
       </div>

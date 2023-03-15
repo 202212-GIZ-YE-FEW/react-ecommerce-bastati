@@ -11,7 +11,6 @@ function Card({ productId, productImage, productTitle, productPrice }) {
   return (
     <>
       <div className="card-container col-md-4 col-lg-3 mb-4 col-sm-12 rounded" key={productId}>
-
         <div className="card py-3">
           <div className='d-flex justify-content-between'>
             <div className='text-center '>
