@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getCat } from '../utilities/api'
 import Axios from 'axios';
 import Card from '../components/Card';
+
 function ProductPage({ productId, productImage, productTitle, productPrice }) {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
@@ -51,6 +52,8 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
               productImage={product.image}
               productTitle={product.title}
               productPrice={product.price}
+
+
             />
           )}
         </div>
