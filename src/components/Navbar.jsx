@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/images/logo.png'
 import { NavLink } from "react-router-dom";
+import { useShoppingCart } from '../context/ShoppingCartContext';
 
 function Navbar() {
+  const { cartQuantity, cartItems } = useShoppingCart()
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid px-5 py-2">
@@ -22,19 +24,16 @@ function Navbar() {
             <li className="nav-item">
               <NavLink className="nav-link active" aria-current="page" to="/about">About</NavLink>
             </li>
-
-
           </ul>
           <div>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Search</button>
-              <div className='cart-icon'>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div className='cart-Counetr'><p>0</p></div>
-
-              </div>
-            </form>
+            <div className="d-flex" role="search">
+              <NavLink to="/cart">
+                <div className='cart-icon'>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <div className='cart-Counetr'><p>{cartItems.length}</p></div>
+                </div>
+              </NavLink>
+            </div>
           </div>
         </div>
       </div>

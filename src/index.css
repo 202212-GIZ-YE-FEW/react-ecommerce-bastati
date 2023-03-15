@@ -1,4 +1,5 @@
 /* Fotter    */
+
 footer {
   background-color: #212529;
   color: #fff;
@@ -98,7 +99,13 @@ footer .last-footer {
 }
 
 /* card */
-
+.card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   transition: all 0.3s;
+}
+.card:hover{
+   transform: translateY(-10px);
+}
 .card-container {
   text-align: center;
   padding: 0px;
@@ -107,6 +114,8 @@ footer .last-footer {
 }
 
 .card-container div {
+    width: 100%;
+    border: none !important;
   width: 100%;
 }
 
@@ -144,6 +153,9 @@ footer .last-footer {
 
 /* navBar */
 nav .cart-icon {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
   display: flex;
   margin-left: 10px;
   align-items: center;
