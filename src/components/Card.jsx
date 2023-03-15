@@ -26,7 +26,6 @@ function Card({ productId, productImage, productTitle, productPrice }) {
                   </div>
 
                   <p className='text-black-50 p-2 small'>{productPrice}$</p>
-
                 </div>
               </div>
             </div>

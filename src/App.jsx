@@ -13,9 +13,11 @@ import CartPage from "./Pages/CartPage";
 
 function App() {
   // Create a client
+
   const queryClient = new QueryClient();
   return (
     <div className="App">
+
       <Navbar />
       <QueryClientProvider client={queryClient}>
         <Routes>
@@ -27,7 +29,9 @@ function App() {
         </Routes>
       </QueryClientProvider>
       <Footer />
+
     </div>
+
   )
 }
 
