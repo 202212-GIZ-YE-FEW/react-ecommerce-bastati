@@ -5,7 +5,8 @@ import { useShoppingCart } from '../context/ShoppingCartContext'
 import '../assets/css/Cartitem.css'
 export default function CartItems({ id, quantity }) {
     const [products, setProducts] = useState([])
-    const { cartItems, increaseCartQuantity,
+    const { cartItems, 
+        increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart } = useShoppingCart()
 
@@ -21,6 +22,12 @@ export default function CartItems({ id, quantity }) {
     }
     const item = products.find((i) => i.id === id);
     if (item == null) return null;
+    if (!id){ 
+        return(
+            <div>"empty cart"</div>
+        ) 
+    }
+    else{
     return (
         <div>
             <div className="row cart-item">
@@ -60,4 +67,5 @@ export default function CartItems({ id, quantity }) {
 
         </div>
     )
+    }
 }
