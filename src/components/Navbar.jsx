@@ -29,8 +29,6 @@ function Navbar() {
           </form>
           <div>
             <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Search</button>
               <NavLink to="/cart" className="">
                 <div className='cart-icon'>
                   <i class="fa-solid fa-cart-shopping"></i>
