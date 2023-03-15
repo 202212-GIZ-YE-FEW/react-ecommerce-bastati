@@ -1,12 +1,12 @@
-import { createContext, useContext, useState,useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import CartPage from "../Pages/CartPage";
- 
-export const ShoppingCartContext =createContext();
+
+export const ShoppingCartContext = createContext();
 const initialCartItems = localStorage.getItem("shopping-cart")
     ? JSON.parse(localStorage.getItem("shopping-cart"))
     : [];
 
-export const ShoppingCartProvider = ({ children }) =>{
+export const ShoppingCartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState(initialCartItems)
     const cartQuantity = cartItems.reduce(
         (quantity, item) => item.quantity + quantity,
@@ -85,18 +85,19 @@ export const ShoppingCartProvider = ({ children }) =>{
             title: 'item delete from cart'
         })
     };
-    return (<ShoppingCartContext.Provider value={{cartItems, 
-    getItemQuantity,
-     increaseCartQuantity, 
-     decreaseCartQuantity,
+    return (<ShoppingCartContext.Provider value={{
+        cartItems,
+        getItemQuantity,
+        increaseCartQuantity,
+        decreaseCartQuantity,
         removeFromCart,
         cartQuantity
-}}>
-{children}
-<CartPage />
+    }}>
+        {children}
+        {/* <CartPage /> */}
     </ShoppingCartContext.Provider>
-);
+    );
 }
-export const useShoppingCart=()=>{
+export const useShoppingCart = () => {
     return useContext(ShoppingCartContext)
 }

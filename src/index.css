@@ -158,13 +158,11 @@ footer .last-footer {
     margin: auto;
 }
 
-
 /* navBar */
 nav .cart-icon {
     display: flex;
     margin-left: 10px;
     align-items: center;
-    position: w;
 }
 
 
@@ -199,5 +197,3 @@ nav .cart-icon i {
     padding: 11px 10px 10px 8px; */
     font-size: 18px;
 }
-
-@media only screen and (max-width: 600px) {}

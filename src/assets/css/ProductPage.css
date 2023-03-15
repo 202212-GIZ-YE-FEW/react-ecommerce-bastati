@@ -7,9 +7,11 @@ p {
 .cartBtn {
     background-color: #30336b;
 }
-.cart{
+
+.cart {
     width: 444px;
 }
+
 p {
     font-family: Ubuntu-B;
     /* color: black;
@@ -18,8 +20,12 @@ p {
 
 .cartBtn {
     background-color: #30336b;
+    width: 150px;
+    padding: 0 !important;
+    margin: auto;
 }
-.categorie-div{
+
+.categorie-div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +34,7 @@ p {
     margin-bottom: 50px;
     font-family: Ubuntu-M;
 }
+
 .categorie-btn {
     --color: #30336b;
     display: inline-block;
@@ -79,4 +86,34 @@ p {
 
 .cart {
     width: 444px;
+}
+
+.form-box {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box input {
+    font-family: monospace;
+    max-width: 190px;
+    outline: none;
+    border: 1px solid #dadada;
+    padding: 5px 25px;
+    border-radius: 5px;
+    width: 550px;
+    background-color: #f3f7fe;
+    transition: .3s;
+    color: #3b82f6;
+    margin-top: 30px;
+}
+
+
+.input::placeholder {
+    color: #30336b;
+}
+
+.input:focus {
+    border: 1px solid #30336b;
+    box-shadow: 0 0 0 5px #30336b
 }

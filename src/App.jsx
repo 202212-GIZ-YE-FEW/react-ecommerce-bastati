@@ -15,9 +15,9 @@ function App() {
   // Create a client
 
   const queryClient = new QueryClient();
+
   return (
     <div className="App">
-
       <Navbar />
       <QueryClientProvider client={queryClient}>
         
