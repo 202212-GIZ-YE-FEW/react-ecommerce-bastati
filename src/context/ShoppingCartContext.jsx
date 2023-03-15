@@ -8,6 +8,7 @@ const initialCartItems = localStorage.getItem("shopping-cart")
 
 export const ShoppingCartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState(initialCartItems)
+    //  quantity 
     const cartQuantity = cartItems.reduce(
         (quantity, item) => item.quantity + quantity,
         0
@@ -16,9 +17,58 @@ export const ShoppingCartProvider = ({ children }) => {
         localStorage.setItem("shopping-cart", JSON.stringify(cartItems));
     }, [cartItems]);
     
+
     const getItemQuantity = (id) => {
         return cartItems.find((item) => item.id === id)?.quantity || 0;
     };
+
+
+    // add to cart function
+    const addtocartFun= (id) => {
+        setCartItems((currItems) => {
+            if (currItems.find((item) => item.id === id) == null) {
+              
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'item added to cart'
+                })
+                return [...currItems, { id, quantity: 1 }];
+            }
+            else{
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'warning',
+                    title: ' item already in cart'
+                })
+                return  [...currItems];
+            } 
+    })
+            }
+
+       // incerase quantity btn
     const increaseCartQuantity = (id) => {
         setCartItems((currItems) => {
             if (currItems.find((item) => item.id === id) == null) {
@@ -33,24 +83,9 @@ export const ShoppingCartProvider = ({ children }) => {
                 });
             }
         });
-
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        })
-
-        Toast.fire({
-            icon: 'success',
-            title: 'item added to cart'
-        })
     };
+
+    // decrease quantity btn
     const decreaseCartQuantity = (id) => {
         setCartItems((currItems) => {
             if (currItems.find((item) => item.id === id)?.quantity === 1) {
@@ -66,6 +101,8 @@ export const ShoppingCartProvider = ({ children }) => {
             }
         });
     };
+
+    // remove item from cart
     const removeFromCart = (id) => {
         setCartItems((currItems) => currItems.filter((item) => item.id !== id));
         const Toast = Swal.mixin({
@@ -85,16 +122,17 @@ export const ShoppingCartProvider = ({ children }) => {
             title: 'item delete from cart'
         })
     };
+
     return (<ShoppingCartContext.Provider value={{
         cartItems,
         getItemQuantity,
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
+        addtocartFun,
         cartQuantity
     }}>
         {children}
-        {/* <CartPage /> */}
     </ShoppingCartContext.Provider>
     );
 }
