@@ -3,13 +3,12 @@ import './App.css'
 import HomePage from './Pages/HomePage'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ProductPage from "./Pages/ProductPage";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faMoon, faRocket } from "@fortawesome/free-solid-svg-icons";
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import AboutPage from "./Pages/AboutPage";
 import ProductDetailsPage from "./Pages/ProductDetailsPage";
-library.add(faMoon, faRocket);
+import CartPage from "./Pages/CartPage";
+
 
 
 function App() {
@@ -23,6 +22,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="products" element={<ProductPage />} />
           <Route path="about" element={<AboutPage />} />
+          <Route path="cart" element={<CartPage />} />
           <Route path="products/:productId" element={<ProductDetailsPage />} />
         </Routes>
       </QueryClientProvider>
