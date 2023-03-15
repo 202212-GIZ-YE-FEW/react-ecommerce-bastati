@@ -15,6 +15,7 @@ export const ShoppingCartProvider = ({ children }) =>{
     useEffect(() => {
         localStorage.setItem("shopping-cart", JSON.stringify(cartItems));
     }, [cartItems]);
+    
     const getItemQuantity = (id) => {
         return cartItems.find((item) => item.id === id)?.quantity || 0;
     };

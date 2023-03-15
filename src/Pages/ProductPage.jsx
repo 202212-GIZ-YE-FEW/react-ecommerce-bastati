@@ -40,13 +40,15 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
 
         <div className="row justify-content-around">
           {products?.map(product =>
-            <Card key={product.id} productId={product.id}
+            <Card key={product.id}
+              productId={product.id}
               productImage={product.image}
               productTitle={product.title}
               productPrice={product.price}
-
+    
 
             />
+         
           )}
         </div>
 
