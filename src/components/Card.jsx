@@ -24,16 +24,16 @@ function Card({ productId, productImage, productTitle, productPrice }) {
                   </div>
 
                   <p className='text-black-50 p-2 small'>{productPrice}$</p>
-                  <button className='cartBtn border-0 text-white rounded px-3 py-2'>
-                    <i className="fa-solid fa-cart-plus px-2"></i>add to cart </button>
+
                 </div>
               </div>
             </div>
-          </div>
-
+            <button className='cartBtn border-0 text-white rounded px-3 py-2'>
+          <i className="fa-solid fa-cart-plus px-2"></i>add to cart </button>
+      </div>
         </Link>
-
-      </div></>
+       
+    </div></>
   )
 }
 
