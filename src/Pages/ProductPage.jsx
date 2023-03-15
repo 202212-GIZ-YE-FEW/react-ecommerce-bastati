@@ -55,6 +55,7 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
               productTitle={product.title}
               productPrice={product.price}
             />
+         
           )}
         </div>
 
