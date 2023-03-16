@@ -28,6 +28,8 @@ function Card({ productId, productImage, productTitle, productPrice, productRati
                     initialRating={productRating}
                     readonly
                   />
+
+                  
                 </div>
               </Link>
             </div>
