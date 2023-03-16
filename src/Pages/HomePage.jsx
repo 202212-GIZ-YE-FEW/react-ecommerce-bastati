@@ -3,7 +3,7 @@ import '../assets/css/ProductPage.css'
 import Card from '../components/Card'
 import Carousel from '../components/Carousel'
 import Axios from 'axios';
-
+import Rating from 'react-rating';
 
 
 
@@ -35,6 +35,7 @@ function HomePage() {
                 productImage={product.image}
                 productTitle={product.title}
                 productPrice={product.price}
+                productRating={product.rating && product.rating.rate}
               />
             )}
           </div>

@@ -130,6 +130,7 @@ footer .last-footer {
 .card-container .title-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     max-height: 100px;
     min-height: 100px;
     overflow: hidden;

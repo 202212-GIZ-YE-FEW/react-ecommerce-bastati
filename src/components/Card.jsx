@@ -4,6 +4,7 @@ import { useShoppingCart } from '../context/ShoppingCartContext';
 import '../assets/css/ProductPage.css'
 import { Link } from 'react-router-dom'
 import Rating from 'react-rating';
+
 function Card({ productId, productImage, productTitle, productPrice, productRating }) {
 
   const { getItemQuantity, increaseCartQuantity } = useShoppingCart()
@@ -14,7 +15,7 @@ function Card({ productId, productImage, productTitle, productPrice, productRati
         <div className="card py-3">
           <div className='d-flex justify-content-between'>
             <div className='text-center '>
-              <Link to={`/products/${productId}`}>
+              <Link to={`/products/${productId}`} className="text-decoration-none text-dark">
                 <div className='cardImage'>
                   <img src={productImage} className="card-img-top" />
                 </div>
