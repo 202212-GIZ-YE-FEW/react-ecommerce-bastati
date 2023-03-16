@@ -1,0 +1,119 @@
+p {
+    font-family: Ubuntu-B;
+    /* color: black;
+    font-size: 50px; */
+}
+
+.cartBtn {
+    background-color: #30336b;
+}
+
+.cart {
+    width: 444px;
+}
+
+p {
+    font-family: Ubuntu-B;
+    /* color: black;
+    font-size: 50px; */
+}
+
+.cartBtn {
+    background-color: #30336b;
+    width: 150px;
+    padding: 0 !important;
+    margin: auto;
+}
+
+.categorie-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: Ubuntu-M;
+}
+
+.categorie-btn {
+    --color: #30336b;
+    display: inline-block;
+    width: 7em;
+    height: 2.4em;
+    line-height: 2.2em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    text-transform: capitalize;
+}
+
+.categorie-btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.categorie-btn:hover {
+    color: #fff;
+}
+
+.categorie-btn:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.categorie-btn:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.categorie-btn:active:before {
+    background: #30336b;
+    transition: background 0s;
+}
+
+.cart {
+    width: 444px;
+}
+
+.form-box {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box input {
+    font-family: monospace;
+    max-width: 190px;
+    outline: none;
+    border: 1px solid #dadada;
+    padding: 5px 25px;
+    border-radius: 5px;
+    width: 550px;
+    background-color: #f3f7fe;
+    transition: .3s;
+    color: #3b82f6;
+    margin-top: 30px;
+}
+
+
+.input::placeholder {
+    color: #30336b;
+}
+
+.input:focus {
+    border: 1px solid #30336b;
+    box-shadow: 0 0 0 5px #30336b
+}

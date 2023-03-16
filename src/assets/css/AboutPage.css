@@ -1,0 +1,16 @@
+.About {
+    height: 55vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: Ubuntu-R;
+}
+
+.About h3 {
+    line-height: 1.8;
+    font-family: Ubuntu-B;
+}
+
+.About p {
+    line-height: 1.8;
+}
