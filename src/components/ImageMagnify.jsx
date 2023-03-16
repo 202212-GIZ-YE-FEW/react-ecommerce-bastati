@@ -21,7 +21,7 @@ export const ImageMagnify = () => {
     <div className='container'>
       <div className='row'>
         <div className='col-lg-6'>
-          <div className='rounded float-start' style={{zIndex: "1000"}}>
+          <div className='rounded float-start'>
             <ReactImageMagnify {...{
               smallImage: {
                 alt: '',
@@ -39,9 +39,9 @@ export const ImageMagnify = () => {
         <div className='col-lg-6'>
           <h2 className='title'>{product.title}</h2>
           <Rating
-            initialRating={2.5}
+            initialRating={product.rating}
             readonly
-            style={{ zIndex: "-1" }} />
+          />
           <div className="d-flex">
             <div className="price">
               <p>Old</p>
@@ -54,16 +54,15 @@ export const ImageMagnify = () => {
               <p>{product.price} $</p>
             </div>
           </div>
-          <h2>
-            Product Category:{" "}
-          </h2>
-          <p>product.category</p>
-          <h2 className="">QTY.</h2>
+          <div className='description'>
+            <p>{product.description}</p>
+          </div>
           <div className="quantity">
+            <h2 className="">QTY.</h2>
             <button className="btn btn-light"  onClick={() => setCount(count + 1)}> + </button>
             <span>{count}</span>
             <button className="btn btn-light" onClick={() => setCount(count - 1)}> - </button>
-            <button className="btn btn-primary" onclick="">ADD  TO CART</button>
+            <button className="btn btn-primary" onclick="">ADD TO CART</button>
         </div>
         </div>
       </div>
