@@ -23,7 +23,7 @@ react-ecommerce-bastati created by GitHub Classroom
 
 ## Tools Used : 
 
-[![My Skills](https://skillicons.dev/icons?i=netlify,html,css,react,bootstrap)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=netlify,html,css,sass,react,bootstrap)](https://skillicons.dev)
 
 ## Amazing Team:
 
