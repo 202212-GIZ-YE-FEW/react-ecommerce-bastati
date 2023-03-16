@@ -28,9 +28,9 @@ react-ecommerce-bastati created by GitHub Classroom
 ## Amazing Team:
 
 **Adeeb Abdulsamad** <br />
-**Ruqaiah Saif**
-**Yassin Alhumaidi**
-**Ramiz Ali**
+**Ruqaiah Saif** <br />
+**Yassin Alhumaidi** <br />
+**Ramiz Ali** <br />
 **Sanaa Abo Hager**
 
 
