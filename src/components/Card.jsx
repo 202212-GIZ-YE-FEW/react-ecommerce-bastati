@@ -3,11 +3,11 @@ import '@fortawesome/fontawesome-svg-core'
 import { useShoppingCart } from '../context/ShoppingCartContext';
 import '../assets/css/ProductPage.css'
 import { Link } from 'react-router-dom'
+import Rating from 'react-rating';
 
+function Card({ productId, productImage, productTitle, productPrice, productRating }) {
 
-function Card({ productId, productImage, productTitle, productPrice }) {
-
-  const { getItemQuantity, increaseCartQuantity, addtocartFun } = useShoppingCart()
+  const { getItemQuantity, increaseCartQuantity } = useShoppingCart()
   const quantity = getItemQuantity(productId)
   return (
     <>
@@ -15,9 +15,8 @@ function Card({ productId, productImage, productTitle, productPrice }) {
         <div className="card py-3">
           <div className='d-flex justify-content-between'>
             <div className='text-center '>
-              <Link to={`/products/${productId}`}>
+              <Link to={`/products/${productId}`} className="text-decoration-none text-dark">
                 <div className='cardImage'>
-
                   <img src={productImage} className="card-img-top" />
                 </div>
                 <div className="card-body">
@@ -25,14 +24,16 @@ function Card({ productId, productImage, productTitle, productPrice }) {
                     <p className='title fs-5 p-2'>{productTitle}</p>
                   </div>
                   <p className='text-black-50 small'>{productPrice}$</p>
-                
+                  <Rating
+                    initialRating={productRating}
+                    readonly
+                  />
                 </div>
               </Link>
             </div>
           </div>
-        
-          <button className='cartBtn border-0 text-white rounded px-3 py-2' onClick={() => addtocartFun(productId)} >
-            
+          <button className='cartBtn border-0 text-white rounded px-3 py-2' onClick={() => increaseCartQuantity(productId)} >
+
             <i class="fa-solid fa-cart-plus px-2" ></i>add to cart</button>
         </div>
       </div></>

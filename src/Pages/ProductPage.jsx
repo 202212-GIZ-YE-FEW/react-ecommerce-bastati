@@ -5,7 +5,7 @@ import Axios from 'axios';
 import Card from '../components/Card';
 
 
-function ProductPage({ productId, productImage, productTitle, productPrice }) {
+function ProductPage() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   function handleSerach(e) {
@@ -55,12 +55,12 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
               productImage={product.image}
               productTitle={product.title}
               productPrice={product.price}
-             
+              productRating={product.rating && product.rating.rate}
             />
-         
+
           )}
         </div>
-      
+
       </div>
 
 

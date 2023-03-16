@@ -16,13 +16,13 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
             <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+              <NavLink className="nav-link active" style={({ isActive }) => ({ color: isActive ? '#30336b' : 'black', fontFamily: isActive && 'Ubuntu-B' })} aria-current="page" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="/products">Products</NavLink>
+              <NavLink className="nav-link active" style={({ isActive }) => ({ color: isActive ? '#30336b' : 'black', fontFamily: isActive && 'Ubuntu-B' })} aria-current="page" to="/products">Products</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="/about">About</NavLink>
+              <NavLink className="nav-link active" style={({ isActive }) => ({ color: isActive ? '#30336b' : 'black', fontFamily: isActive && 'Ubuntu-B' })} aria-current="page" to="/about">About</NavLink>
             </li>
           </ul>
           <div>

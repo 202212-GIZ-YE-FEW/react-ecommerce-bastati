@@ -6,7 +6,6 @@ function ProductDetailsPage() {
   const params = useParams();
   const { cartItems } = useShoppingCart()
   return (
-    
     <ImageMagnify cartItems={cartItems}  />
     // <h2>
     //   Product Details {params.productId}
