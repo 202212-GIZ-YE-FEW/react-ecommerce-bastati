@@ -55,12 +55,12 @@ function ProductPage({ productId, productImage, productTitle, productPrice }) {
               productImage={product.image}
               productTitle={product.title}
               productPrice={product.price}
-             
+              productRating={product.rating && product.rating.rate}
             />
-         
+
           )}
         </div>
-      
+
       </div>
 
 
