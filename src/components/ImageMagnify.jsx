@@ -5,14 +5,19 @@ import { useParams } from 'react-router-dom'
 import '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { useShoppingCart } from '../context/ShoppingCartContext'
 
 
-
- const ImageMagnify = () => {
+const ImageMagnify = ({quantity=1}) => {
   const [product, setProduct] = useState([]);
   const { productId } = useParams();
   const [count, setCount] = useState(1)
-
+   const { cartItems,
+     increaseCartQuantity,
+     decreaseCartQuantity,
+     removeFromCart,
+         addtocartFun } = useShoppingCart()
+  console.log(cartItems)
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${productId}`)
       .then((response) => response.json())
@@ -44,10 +49,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
         <div className='col-lg-6'>
           <h2 className='title'>{product.title}</h2>
           <Rating
-                    initialRating={5}
+                    initialRating={product.rating && product.rating.rate}
                     readonly
-                  />{product.rating.rate}
-
+                  />
           <div className="d-flex">
             <div className="price">
               <p>Old</p>
@@ -69,7 +73,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
               <button className="btn btn-light" onClick={() => setCount(count + 1)}> + </button>
               <span>{count}</span>
               <button className="btn btn-light" onClick={() => setCount(count - 1)}> - </button>
-              <button className="btn btn-primary" onClick={() => addtocartFun(product.id)}>ADD TO CART</button>
+              <button className="cartBtn border-0 text-white rounded px-3 py-2" onClick={() => addtocartFun(product.id)}>ADD TO CART</button>
+           
             </div>
             
             
