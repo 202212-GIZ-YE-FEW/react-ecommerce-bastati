@@ -1,4 +1,4 @@
-# react-ecommerce-bastati
+# React-Ecommerce-Bastati
 react-ecommerce-bastati created by GitHub Classroom
 
 ## Hero Section
