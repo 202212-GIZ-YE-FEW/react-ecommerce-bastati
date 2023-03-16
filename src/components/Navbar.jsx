@@ -27,7 +27,7 @@ function Navbar() {
           </ul>
           <div>
             <div className="d-flex" role="search">
-              <NavLink to="/cart">
+              <NavLink to="/cart" className="text-decoration-none text-dark">
                 <div className='cart-icon'>
                   <i class="fa-solid fa-cart-shopping"></i>
                   <div className='cart-Counetr'><p>{cartItems.length}</p></div>
