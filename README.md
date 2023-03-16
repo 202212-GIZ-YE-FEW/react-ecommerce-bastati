@@ -19,7 +19,7 @@ react-ecommerce-bastati created by GitHub Classroom
 ## Project Name : **Bastati**
 
 
-## Project Description : *** This ecommerce website had made for the fifth project in the Yemen 🇾🇪 bootcamp 2023 🎉 it had built by fetching Products API and manipulating the DOM ***
+### Project Description : ***This ecommerce website had made for the fifth project in the Yemen 🇾🇪 bootcamp 2023 🎉 it had built by fetching Products API and manipulating the DOM***
 
 ## Tools Used : 
 
