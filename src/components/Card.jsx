@@ -13,6 +13,7 @@ function Card({ productId, productImage, productTitle, productPrice }) {
     <>
       <div className="card-container col-md-4 col-lg-3 mb-4 col-sm-12 rounded" key={productId}>
         <div className="card py-3">
+          <p className='save'>SAVE 25%</p>
           <div className='d-flex justify-content-between'>
             <div className='text-center '>
               <Link to={`/products/${productId}`}>
