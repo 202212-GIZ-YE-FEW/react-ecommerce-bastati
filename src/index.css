@@ -102,6 +102,7 @@ footer .last-footer {
 .card {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: all 0.3s;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -347,4 +348,17 @@ nav .cart-icon i {
     .first_part .texts h3 {
         font-size: 16pt;
     }
+}
+.old {
+  text-decoration: line-through;
+}
+.save {
+  width: 150px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: red;
+  color: white;
+  top: 25px;
+  left: -30px;
+  text-align: center;
 }

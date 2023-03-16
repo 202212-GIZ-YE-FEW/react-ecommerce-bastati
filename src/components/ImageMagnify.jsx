@@ -55,7 +55,7 @@ const ImageMagnify = ({quantity=1}) => {
           <div className="d-flex">
             <div className="price">
               <p>Old</p>
-              <p className="">
+              <p className="old">
                 {product.price + product.price * 0.25} $
               </p>
             </div>
