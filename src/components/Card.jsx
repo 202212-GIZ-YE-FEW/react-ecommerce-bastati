@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import "@fortawesome/fontawesome-svg-core";
-import { useShoppingCart } from "../context/ShoppingCartContext";
-import "../assets/css/ProductPage.css";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react'
+import '@fortawesome/fontawesome-svg-core'
+import { useShoppingCart } from '../context/ShoppingCartContext';
+import '../assets/css/ProductPage.css'
+import { Link } from 'react-router-dom'
 
 
 function Card({ productId, productImage, productTitle, productPrice }) {
@@ -29,7 +29,6 @@ function Card({ productId, productImage, productTitle, productPrice }) {
                 </div>
               </Link>
             </div>
-            <p className="text-black-50 small">{productPrice}$</p>
           </div>
         
           <button className='cartBtn border-0 text-white rounded px-3 py-2' onClick={() => addtocartFun(productId)} >
@@ -40,4 +39,4 @@ function Card({ productId, productImage, productTitle, productPrice }) {
   )
 }
 
-export default Card;
+export default Card

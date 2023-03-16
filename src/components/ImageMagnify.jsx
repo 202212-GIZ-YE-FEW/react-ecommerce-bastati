@@ -5,7 +5,10 @@ import { useParams } from 'react-router-dom'
 import '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export const ImageMagnify = () => {
+
+
+
+ const ImageMagnify = () => {
   const [product, setProduct] = useState([]);
   const { productId } = useParams();
   const [count, setCount] = useState(1)
@@ -15,14 +18,16 @@ export const ImageMagnify = () => {
       .then((response) => response.json())
       .then((json) => setProduct(json));
   }, [productId]);
-  const productImg = product.image
+   const productImg = product.image
+   // const rates = product.rating.rate
+
 
   return (
     <div className='container'>
       <div className='row'>
         <div className='col-lg-6'>
           <div className='rounded float-start'>
-            <ReactImageMagnify {...{
+          <ReactImageMagnify {...{
               smallImage: {
                 alt: '',
                 isFluidWidth: true,
@@ -30,18 +35,19 @@ export const ImageMagnify = () => {
               },
               largeImage: {
                 src: productImg,
-                width: 2200,
+                width: 2100,
                 height: 2100
               }
-              }} />
+            }} />
           </div>
         </div>
         <div className='col-lg-6'>
           <h2 className='title'>{product.title}</h2>
           <Rating
-            initialRating={product.rating}
-            readonly
-          />
+                    initialRating={5}
+                    readonly
+                  />{product.rating.rate}
+
           <div className="d-flex">
             <div className="price">
               <p>Old</p>
@@ -59,13 +65,20 @@ export const ImageMagnify = () => {
           </div>
           <div className="quantity">
             <h2 className="">QTY.</h2>
-            <button className="btn btn-light"  onClick={() => setCount(count + 1)}> + </button>
-            <span>{count}</span>
-            <button className="btn btn-light" onClick={() => setCount(count - 1)}> - </button>
-            <button className="btn btn-primary" onclick="">ADD TO CART</button>
+            <div>
+              <button className="btn btn-light" onClick={() => setCount(count + 1)}> + </button>
+              <span>{count}</span>
+              <button className="btn btn-light" onClick={() => setCount(count - 1)}> - </button>
+              <button className="btn btn-primary" onClick={() => addtocartFun(product.id)}>ADD TO CART</button>
+            </div>
+            
+            
+            
+            
         </div>
         </div>
       </div>
     </div>
   )
 }
+export default ImageMagnify

@@ -293,6 +293,15 @@ nav .cart-icon i {
     background-color: #e74c3c;
 }
 
+.description p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.quantity {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
 
 @media only screen and (max-width: 1044px) {
     .first_part {

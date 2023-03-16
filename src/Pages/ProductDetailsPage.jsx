@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { ImageMagnify } from '../components/ImageMagnify';
+import ImageMagnify from '../components/ImageMagnify';
 
 function ProductDetailsPage() {
   const params = useParams();
