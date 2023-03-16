@@ -1,10 +1,7 @@
-import '../assets/css/Navbar.css';
 import React, { useState } from 'react'
 import logo from '../assets/images/logo.png'
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from '../context/ShoppingCartContext';
-
-
 
 function Navbar() {
   const { cartQuantity, cartItems } = useShoppingCart()

@@ -20,15 +20,13 @@ function HomePage() {
   }
 
   return (
-    <div>
-
-
+    <>
       <Carousel />
-
-      <div className='laste-products'>
-        <div className="container p-5  products-container">
-          <h1 className='py-2'>Last Products</h1>
-
+      <div className='container'>
+        <div className='row'>
+          <div className="col-12">
+            <h1 className='py-2'>Last Products</h1>
+          </div>
           <div className="row">
             {products?.map(product =>
               <Card key={product.id} productId={product.id}
@@ -40,11 +38,8 @@ function HomePage() {
             )}
           </div>
         </div>
-
-
       </div>
-
-    </div>
+    </>
   )
 }
 
